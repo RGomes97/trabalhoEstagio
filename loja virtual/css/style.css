@@ -1,0 +1,35 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.margin-top{
+	margin-top: 50px;
+}
+
+.box-products{
+	border: 1px solid #e6e6e6;
+	padding: 0 !important;
+	box-shadow: 1px 2px 8px -1px;
+	margin-bottom: 20px;
+}
+
+.box-products:hover{
+	box-shadow: 4px 5px 20px -2px;
+	
+}
+
+.box-products.col-md-3 {
+	width: calc(25% - 10px);
+	margin-right: calc(((25% - 10px) - 25%) * -1);
+}
+
+.margin-buttons{
+	margin: 5px 0px;
+}
+
+.navbar-right{
+	margin-right: 0px !important;
+}
