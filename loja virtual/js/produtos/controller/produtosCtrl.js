@@ -9,9 +9,12 @@ angular.module('produtos',[]).controller('produtosCtrl', function($scope){
 		{nome: 'produto6', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '45'}
 	]
 
+	$scope.filtro = '';
+
 	$scope.carrinho = [];
 
 	$scope.addToCart = function(product){
+		console.log(product.id);
 		this.carrinho.push(angular.copy(product));
 		console.log($scope.carrinho);
 	}

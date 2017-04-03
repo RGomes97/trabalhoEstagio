@@ -12,6 +12,7 @@
 	<script src="js/main/module/main.js"></script>
 	<script src="js/produtos/module/produtos.js"></script>
 	<script src="js/produtos/controller/produtosCtrl.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-animate.js"></script>
 </head>
 <body ng-controller="produtosCtrl">
 	<nav class="navbar navbar-default">
@@ -25,7 +26,7 @@
 			<div class="row margin-top">
 				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="O que voce deseja?" />
+						<input type="text" ng-model="filtro" class="form-control" placeholder="O que voce deseja?" />
 						<span class="input-group-btn">
 							<button class="btn btn-default">Filtrar</button>
 						</span>
@@ -35,7 +36,7 @@
 		</section>
 		<section class="products margin-top">
 			<div class="row col-md-12 text-center">
-				<div ng-repeat="produto in produtos" class="col-md-3 box-products">
+				<div ng-repeat="produto in produtos | filter: filtro" class="col-md-3 box-products">
 					<img class="img-responsive" src="{{produto.url}}" />
 					<div class="margin-buttons">
 						<h4>R$ {{produto.preco | number:2}}</h4>

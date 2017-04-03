@@ -33,3 +33,11 @@
 .navbar-right{
 	margin-right: 0px !important;
 }
+
+.fade.ng-leave-active{
+	-moz-transform: scale(0.1);
+	-webkit-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	-o-transform: scale(0.1);
+	transform: scale(0.1);
+}
