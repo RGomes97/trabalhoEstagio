@@ -1,0 +1,19 @@
+{
+  "name": "loja",
+  "version": "1.0.0",
+  "description": "Trabalho de estagio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RGomes97/trabalhoEstagio.git"
+  },
+  "author": "Rubens Gomes Agostinho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RGomes97/trabalhoEstagio/issues"
+  },
+  "homepage": "https://github.com/RGomes97/trabalhoEstagio#readme"
+}

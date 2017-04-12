@@ -1,34 +1,12 @@
-<a href="#/rubens">ir para A</a>
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <p class="navbar-text navbar-right">Cart : {{carrinho.length}}</p>
-	    <p class="navbar-text navbar-left">DT-Ecommerce</p>
-	  </div>
-	</nav>
-	<div class="container">
-		<section class="search">
-			<div class="row margin-top">
-				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-					<div class="input-group">
-						<input type="text" ng-model="filtro" class="form-control" placeholder="O que voce deseja?" />
-						<span class="input-group-btn">
-							<button class="btn btn-default">Filtrar</button>
-						</span>
-					</div>
-				</div>		
-			</div>
-		</section>
-		<div ng-view></div>
-		<section class="products margin-top">
-			<div class="row col-md-12 text-center">
-				<div ng-repeat="produto in produtos | filter: filtro" class="col-md-3 box-products">
-					<img class="img-responsive" src="{{produto.url}}" />
-					<div class="margin-buttons">
-						<h4>R$ {{produto.preco | number:2}}</h4>
-						<button class="btn btn-default" ng-click="addToCart(produto)">Add to cart</button>
-						<button class="btn btn-info">View more</button>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+<table class="table table-striped">
+	<tr>
+		<th>Nome do produto</th>
+		<th>Descrição</th>
+		<th>Preço</th>
+	</tr>
+	<tr ng-repeat="produto in carrinho">
+		<td>{{produto.nome}}</td>
+		<td>Descricao</td>
+		<td>{{produto.preco}}</td>
+	</tr>
+</table>
