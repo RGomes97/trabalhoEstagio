@@ -1,8 +1,7 @@
 angular.module('produtos',[])
 
-.controller('produtosCtrl', function($scope){
-
-	$scope.produtos = [
+.factory('produtosService', function(){
+	var produtos = [
 		{id: '1', nome: 'produto1', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '40'},
 		{id: '2', nome: 'produto2', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '100'},
 		{id: '3', nome: 'produto3', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '300'},
@@ -10,6 +9,17 @@ angular.module('produtos',[])
 		{id: '5', nome: 'produto5', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '89'},
 		{id: '6', nome: 'produto6', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '45'}
 	]
+
+	return {
+	    allProducts: function() {
+	      return produtos;
+	    }
+	}
+})
+
+.controller('produtosCtrl', function($scope, produtosService){
+
+	$scope.produtos = produtosService.allProducts();	
 
 	$scope.filtro = '';
 
