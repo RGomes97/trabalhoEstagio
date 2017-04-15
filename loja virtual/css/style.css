@@ -41,3 +41,21 @@
 	-o-transform: scale(0.1);
 	transform: scale(0.1);
 }
+
+.ng-enter{
+	transition: 1s;
+	opacity: 0;
+}
+
+.ng-enter-active{
+	opacity: 1;
+}
+
+.trAnimation.ng-leave{
+	transition: 0.75s;
+	opacity: 1;
+}
+
+.trAnimation.ng-leave-active{
+	opacity: 0;	
+}

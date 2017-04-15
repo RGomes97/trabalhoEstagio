@@ -7,4 +7,7 @@ angular.module('main', ['produtos','ngAnimate','ngRoute'])
 	.when('/', {
 		templateUrl: 'principal.html'
 	})
+	.when('/details', {
+		templateUrl: 'details.html'
+	})
 })

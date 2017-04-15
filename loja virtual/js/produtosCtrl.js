@@ -15,7 +15,13 @@ angular.module('produtos',[]).controller('produtosCtrl', function($scope){
 
 	$scope.addToCart = function(product){
 		console.log(product.id);
-		this.carrinho.push(angular.copy(product));
+		$scope.carrinho.push(angular.copy(product));
+		console.log($scope.carrinho);
+	}
+
+	$scope.removeFromCart = function(product){
+		console.log(product);
+		$scope.carrinho.splice(product, 1);
 		console.log($scope.carrinho);
 	}
 })

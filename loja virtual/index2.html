@@ -3,10 +3,12 @@
 		<th>Nome do produto</th>
 		<th>Descrição</th>
 		<th>Preço</th>
+		<th>Remover</th>
 	</tr>
-	<tr ng-repeat="produto in carrinho">
+	<tr class="trAnimation" ng-repeat="produto in carrinho">
 		<td>{{produto.nome}}</td>
 		<td>Descricao</td>
 		<td>{{produto.preco}}</td>
+		<td><button class="btn btn-default" ng-click="removeFromCart($index)">Remover</button></td>
 	</tr>
 </table>
