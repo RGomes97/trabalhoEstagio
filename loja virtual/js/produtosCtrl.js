@@ -1,12 +1,14 @@
-angular.module('produtos',[]).controller('produtosCtrl', function($scope){
+angular.module('produtos',[])
+
+.controller('produtosCtrl', function($scope){
 
 	$scope.produtos = [
-		{nome: 'produto1', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '40'},
-		{nome: 'produto2', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '100'},
-		{nome: 'produto3', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '300'},
-		{nome: 'produto4', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '500'},
-		{nome: 'produto5', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '89'},
-		{nome: 'produto6', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '45'}
+		{id: '1', nome: 'produto1', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '40'},
+		{id: '2', nome: 'produto2', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '100'},
+		{id: '3', nome: 'produto3', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '300'},
+		{id: '4', nome: 'produto4', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '500'},
+		{id: '5', nome: 'produto5', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '89'},
+		{id: '6', nome: 'produto6', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '45'}
 	]
 
 	$scope.filtro = '';
@@ -23,5 +25,12 @@ angular.module('produtos',[]).controller('produtosCtrl', function($scope){
 		console.log(product);
 		$scope.carrinho.splice(product, 1);
 		console.log($scope.carrinho);
-	}
+	};
+})
+
+.controller('detailsCtrl', function($scope,$routeParams){
+	$scope.model = {
+    	id: $routeParams.id,
+  	}
+  	console.log($scope.model);
 })
