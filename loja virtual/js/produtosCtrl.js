@@ -38,9 +38,21 @@ angular.module('produtos',[])
 	};
 })
 
-.controller('detailsCtrl', function($scope,$routeParams){
+.controller('detailsCtrl', function($scope,$routeParams, produtosService){
 	$scope.model = {
     	id: $routeParams.id,
   	}
+
+  	var teste = produtosService.allProducts();
+
+  	angular.forEach(teste, function(item){
+  		if(item.id == $scope.model.id){
+  			$scope.nome = item.nome;
+  			$scope.url = item.url;
+  			$scope.preco = item.preco;
+  		}
+  	});	
+
+
   	console.log($scope.model);
 })
