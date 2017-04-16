@@ -62,15 +62,11 @@ angular.module('produtos',[])
 	$scope.carrinho = [];
 
 	$scope.addToCart = function(product){
-		console.log(product.id);
 		$scope.carrinho.push(angular.copy(product));
-		console.log($scope.carrinho);
 	}
 
 	$scope.removeFromCart = function(product){
-		console.log(product);
 		$scope.carrinho.splice(product, 1);
-		console.log($scope.carrinho);
 	};
 })
 
@@ -89,7 +85,4 @@ angular.module('produtos',[])
   			$scope.details = item.descricao;
   		}
   	});	
-
-
-  	console.log($scope.model);
 })
