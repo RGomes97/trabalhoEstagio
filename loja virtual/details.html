@@ -1,6 +1,15 @@
-aloha
-{{model.id}}
-{{nome}}
-<img src="{{url}}">
-{{preco}}
-<a href="/">Back to products list</a>
+<div class="container">
+	<div style="padding: 20px !important;" class="box-product-detail">
+		<div class="row">
+			<div style="padding-left: 0px!important;" class="col-md-6">
+				<img class="img-responsive" src="{{url}}">
+			</div>
+			<div class="col-md-6 text-center"> 
+				<h2>{{nome}}</h2>
+				<p>{{details}}</p>
+				<h3>Preco: {{preco | number:2}}</h3>
+			</div>
+		</div>
+	</div>
+	<center><a href="/" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>Voltar a lista de Produtos</a></center>
+</div>

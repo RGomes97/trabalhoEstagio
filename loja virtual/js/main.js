@@ -11,4 +11,5 @@ angular.module('main', ['produtos','ngAnimate','ngRoute'])
 		templateUrl: 'details.html',
 		controller: 'detailsCtrl'
 	})
+	.otherwise({redirectTo:'/'});
 })

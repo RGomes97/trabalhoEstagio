@@ -9,6 +9,21 @@
 	margin-top: 50px;
 }
 
+.box-cart{
+	border: 1px solid #e7e7e7;
+	border-top: 0;
+}
+
+.box-cart-empty{
+	border: 1px solid #e7e7e7;
+	min-height: 500px;
+	background-image: url('../img/sad.png');
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 1px 2px 8px -1px;
+}
+
 .box-products{
 	border: 1px solid #e6e6e6;
 	padding: 0 !important;
@@ -19,6 +34,13 @@
 .box-products:hover{
 	box-shadow: 4px 5px 20px -2px;
 	
+}
+
+.box-product-detail{
+	border: 1px solid #e6e6e6;
+	padding: 0 !important;
+	box-shadow: 1px 2px 8px -1px;
+	margin-bottom: 20px;	
 }
 
 .box-products.col-md-3 {
@@ -51,11 +73,37 @@
 	opacity: 1;
 }
 
+.box-products.ng-leave{
+	transition: 0.5s;
+	opacity: 1;
+}
+
+.box-products.ng-leave-active{
+	opacity: 0;
+}
+
 .trAnimation.ng-leave{
 	transition: 0.75s;
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .trAnimation.ng-leave-active{
 	opacity: 0;	
+}
+
+.keep-shopping{
+	margin-top: 360px;
+    margin-bottom: 30px;
+}
+
+.row{
+	margin-left: 0 !important;
+}
+
+.glyphicon{
+	margin-right: 10px;
+}
+
+.margin-top{
+	margin-top: 20px !important;
 }

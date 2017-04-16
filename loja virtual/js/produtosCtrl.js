@@ -2,12 +2,48 @@ angular.module('produtos',[])
 
 .factory('produtosService', function(){
 	var produtos = [
-		{id: '1', nome: 'produto1', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '40'},
-		{id: '2', nome: 'produto2', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '100'},
-		{id: '3', nome: 'produto3', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '300'},
-		{id: '4', nome: 'produto4', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '500'},
-		{id: '5', nome: 'produto5', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '89'},
-		{id: '6', nome: 'produto6', url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", preco: '45'}
+		{
+
+			id: '1',
+			nome: 'produto1',
+			descricao: 'Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent', 
+			url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg",
+			preco: '40'
+		},
+		{	
+			id: '2',
+			nome: 'produto2',
+			descricao: 'Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent', 
+			url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg",
+			preco: '100'
+		},
+		{	
+			id: '3',
+			nome: 'produto3',
+			descricao: 'Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent', 
+			url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg",
+			preco: '300'
+		},
+		{	
+			id: '4',
+			nome: 'produto4',
+			descricao: 'Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent', 
+			url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg",
+			preco: '500'
+		},
+		{	
+			id: '5',
+			nome: 'produto5',
+			descricao: 'Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent', 
+			url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg",
+			preco: '89'},
+		{	
+			id: '6', 
+			nome: 'produto6',
+			descricao: 'Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent', 
+			url: "http://www.aprenderexcel.com.br//imagens/noticia/385/2901-1.jpg", 
+			preco: '45'
+		}
 	]
 
 	return {
@@ -50,6 +86,7 @@ angular.module('produtos',[])
   			$scope.nome = item.nome;
   			$scope.url = item.url;
   			$scope.preco = item.preco;
+  			$scope.details = item.descricao;
   		}
   	});	
 

@@ -1,14 +1,19 @@
-<table class="table table-striped">
-	<tr>
-		<th>Nome do produto</th>
-		<th>Descrição</th>
-		<th>Preço</th>
-		<th>Remover</th>
-	</tr>
-	<tr class="trAnimation" ng-repeat="produto in carrinho">
-		<td>{{produto.nome}}</td>
-		<td>Descricao</td>
-		<td>{{produto.preco}}</td>
-		<td><button class="btn btn-default" ng-click="removeFromCart($index)">Remover</button></td>
-	</tr>
-</table>
+<div class="col-md-8 col-md-offset-2">
+	<div class="box-cart">
+		<table class="table table-striped">
+			<tr>
+				<th>Nome do produto</th>
+				<th>Descrição</th>
+				<th>Preço</th>
+				<th>Remover</th>
+			</tr>
+			<tr class="trAnimation" ng-repeat="produto in carrinho">
+				<td>{{produto.nome}}</td>
+				<td>Descricao</td>
+				<td>{{produto.preco}}</td>
+				<td><button class="btn btn-default" ng-click="removeFromCart($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remover</button></td>
+			</tr>
+		</table>
+		<center><a href="/" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Continuar comprando</a></center>
+	</div>
+</div>
