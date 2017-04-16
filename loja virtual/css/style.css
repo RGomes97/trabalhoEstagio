@@ -36,6 +36,11 @@
 	
 }
 
+.box-products img{
+	height: 150px;
+	width: 100%;
+}
+
 .box-product-detail{
 	border: 1px solid #e6e6e6;
 	padding: 0 !important;
@@ -122,8 +127,8 @@
 		margin-right: 0 !important;
 	}
 
-	.col-xs-6.box-products{
-		width: 50% !important;
+	.col-xs-12.box-products{
+		width: 100% !important;
 		margin-right: 0 !important;
 	}
 }
