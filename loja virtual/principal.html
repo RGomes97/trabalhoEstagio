@@ -13,7 +13,7 @@
 	</section>
 	<section class="products margin-top">
 		<div class="row col-md-12 text-center">
-			<div ng-repeat="produto in produtos | filter: filtro" class="col-md-3 col-xs-6 box-products">
+			<div ng-repeat="produto in produtos | filter: filtro" class="col-md-3 col-sm-6 col-xs-6 box-products">
 				<img class="img-responsive" src="{{produto.url}}" />
 				<div class="margin-buttons">
 					<h4>R$ {{produto.preco | number:2}}</h4>
