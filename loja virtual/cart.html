@@ -1,8 +1,8 @@
 <div class="col-md-8 col-md-offset-2">
 	<div class="box-cart">
-		<table class="table table-striped">
+		<table ng-show="{{carrinho.length > 0}}" class="table table-striped">
 			<tr>
-				<th>Nome do produto</th>
+				<th>Nome</th>
 				<th>Descrição</th>
 				<th>Preço</th>
 				<th>Remover</th>
@@ -10,10 +10,18 @@
 			<tr class="trAnimation" ng-repeat="produto in carrinho">
 				<td>{{produto.nome}}</td>
 				<td>Descricao</td>
-				<td>{{produto.preco}}</td>
+				<td>{{produto.preco | number:2}}</td>
 				<td><button class="btn btn-default" ng-click="removeFromCart($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remover</button></td>
 			</tr>
 		</table>
-		<center><a href="/" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Continuar comprando</a></center>
+		<div ng-show="{{getTotal() > 0}}" class="total">
+			Valor Total: R$ {{getTotal() | number:2}}
+		</div>
+
+		<div ng-show="{{carrinho.length <= 0}}" class="total">
+			Seu carrinho de compras está vazio
+		</div>
+
+		<center><a href="/" class="btn btn-default margin-bottom"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Continuar comprando</a></center>
 	</div>
 </div>

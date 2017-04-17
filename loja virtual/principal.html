@@ -15,6 +15,7 @@
 		<div class="row col-md-12 text-center">
 			<div ng-repeat="produto in produtos | filter: filtro" class="col-md-3 col-sm-6 col-xs-12 box-products">
 				<img class="img-responsive" src="{{produto.url}}" />
+				<p class="promocao">{{produto.promocao}}% <br/> OFF</p>
 				<div class="margin-buttons">
 					<h4>R$ {{produto.preco | number:2}}</h4>
 					<button class="btn btn-default" ng-click="addToCart(produto)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Carrinho</button>

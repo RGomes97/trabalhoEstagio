@@ -41,6 +41,17 @@
 	width: 100%;
 }
 
+.box-products:before {
+  border: 65px solid transparent;
+  border-right-color: #31b0d5;
+  content: "";
+  right: -66px;
+  top: -66px; 
+  position: absolute;
+  transform: rotate(135deg);
+  box-shadow: 25px -4px 19px -18px;
+}
+
 .box-product-detail{
 	border: 1px solid #e6e6e6;
 	padding: 0 !important;
@@ -119,6 +130,31 @@
 
 .right{
 	float: right;
+}
+
+.total{
+	width: 100%;
+	clear: both;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	margin: 20px 0px;
+	font-size: 18px;
+}
+
+.margin-bottom{
+	margin-bottom: 20px !important;
+}
+
+.promocao{
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	color: white;
+	font-family: 'Arial;
+	font-weight: bold;
+	font-size: 16px;
+	transform: rotate(45deg);
 }
 
 @media screen and (max-width: 600px){
