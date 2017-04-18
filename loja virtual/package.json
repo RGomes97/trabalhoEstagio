@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RGomes97/trabalhoEstagio/issues"
   },
-  "homepage": "https://github.com/RGomes97/trabalhoEstagio#readme"
+  "homepage": "https://github.com/RGomes97/trabalhoEstagio#readme",
+  "dependencies": {
+    "nws": "^1.1.1"
+  }
 }
