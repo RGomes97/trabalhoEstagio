@@ -1,6 +1,6 @@
 angular.module('produtos',[])
 
-.factory('produtosService', function(){
+.factory('produtosService', function($http){
 	var produtos = [
 		{
 
@@ -52,6 +52,18 @@ angular.module('produtos',[])
 			promocao: '15'
 		}
 	]
+
+	/*
+		var produtos;
+	$http.get('/api/produtos')
+	.success(function(data){
+		produtos = data;
+		console.log(produtos);
+	})
+	.error(function(erro){
+		console.log(erro);
+	})
+	*/
 
 	return {
 	    allProducts: function() {
