@@ -14,9 +14,10 @@ angular.module('produtos',[])
 
 .controller('produtosCtrl', function($scope, produtosService){
 
-	produtosService.allProducts().success(function(data){
-		$scope.produtos = data;
-	});
+	produtosService.allProducts()
+		.success(function(data){
+			$scope.produtos = data;
+		});
 
 	$scope.filtro = '';
 
@@ -44,14 +45,18 @@ angular.module('produtos',[])
     	id: $routeParams.id,
   	}
 
-  	var teste = produtosService.allProducts();
+  	var teste; 
+  	produtosService.allProducts()
+	  	.success(function(data){
+	  		teste = data;
+		  	teste.forEach(function(item){
+		  		if(item.id == $scope.model.id){
+		  			$scope.nome = item.nome;
+		  			$scope.url = item.url;
+		  			$scope.preco = item.preco;
+		  			$scope.details = item.descricao;
+		  		}
+		  	});	
+	  	});
 
-  	angular.forEach(teste, function(item){
-  		if(item.id == $scope.model.id){
-  			$scope.nome = item.nome;
-  			$scope.url = item.url;
-  			$scope.preco = item.preco;
-  			$scope.details = item.descricao;
-  		}
-  	});	
 })
