@@ -8,19 +8,19 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-route.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-mocks.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-mocks.js"></script>
 	<script src="js/modulos/main.js"></script>
 	<script src="js/modulos/produtos.js"></script>
 	<script src="js/controllers/produtosCtrl.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
 </head>
 <body ng-controller="produtosCtrl">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <p class="navbar-text navbar-left margin-top">DT-Ecommerce</p>
-	    <p class="navbar-text navbar-right"><a class="btn btn-default" href="#cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Meu carrinho : {{carrinho.length}}</a></p>
+	    <p class="navbar-text navbar-right"><button class="btn btn-default" ng-click="goToCart()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Meu carrinho : {{carrinho.length}}</button></p>
 	  </div>
 	</nav>
 	<div ng-view></div>

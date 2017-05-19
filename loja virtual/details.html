@@ -2,12 +2,12 @@
 	<div style="padding: 20px !important;" class="box-product-detail">
 		<div class="row">
 			<div style="padding-left: 0px!important;" class="col-md-6">
-				<img class="img-responsive" src="{{url}}">
+				<img class="img-responsive" src="{{produto.url}}">
 			</div>
 			<div class="col-md-6 text-center"> 
-				<h2>{{nome}}</h2>
-				<p>{{details}}</p>
-				<h3>Preco: {{preco | number:2}}</h3>
+				<h2>{{produto.nome}}</h2>
+				<p>{{produto.descricao}}</p>
+				<h3>Preco: {{produto.preco | number:2}}</h3>
 			</div>
 		</div>
 	</div>
