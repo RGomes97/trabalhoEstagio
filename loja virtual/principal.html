@@ -3,7 +3,7 @@
 		<div class="row margin-top">
 			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
 				<div class="input-group">
-					<input type="text" ng-keyup="testando()" ng-model="filtro" class="form-control" placeholder="O que voce deseja?" />
+					<input type="text" ng-keyup="filtrar(search)" ng-model="search" class="form-control" placeholder="O que voce deseja?" />
 					<span class="input-group-btn">
 						<button class="btn btn-default">Filtrar</button>
 					</span>
@@ -13,12 +13,12 @@
 	</section>
 	<section class="menu margin-top">
 		<div class="col-md-12 text-center"> 
-		    <button ng-repeat="categoria in categorias" ng-click="filtrar(categoria.nome)" class="btn btn-default margin-bottom-menu margin-top button-menu">{{categoria.nome}}</button>  
+		    <button ng-repeat="categoria in categorias track by $index" ng-click="filtrar(categoria.nome)" class="btn btn-default margin-bottom-menu margin-top button-menu">{{categoria.nome}}</button>  
 		</div>
 	</section>
 	<section class="products margin-top">
 		<div class="row col-md-12 text-center">
-			<div ng-repeat="produto in produtos | filter: filtro " class="col-md-3 col-sm-6 col-xs-12 box-products">
+			<div ng-repeat="produto in produtos | filter:filtro track by produto.id" class="col-md-3 col-sm-6 col-xs-12 box-products">
 				<img class="img-responsive" src="{{produto.url}}" />
 				<!-- <p class="promocao">{{produto.promocao}}% <br/> OFF</p> -->
 				<div class="margin-buttons">

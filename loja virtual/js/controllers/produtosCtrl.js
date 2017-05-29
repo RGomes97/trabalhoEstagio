@@ -32,10 +32,9 @@ angular.module('produtos',[])
 	$scope.carrinho = [];
 
 	$scope.filtrar = function(nome){ 
-		$scope.filtro = nome;
-		console.log(typeof($scope.filtro));
+		$scope.filtro = angular.copy(nome);
 	}
-
+ 
 	$scope.testando = function(){
 		console.log($scope.filtro);
 	}
