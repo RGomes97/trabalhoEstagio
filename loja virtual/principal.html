@@ -18,15 +18,16 @@
 	</section>
 	<section class="products margin-top">
 		<div class="row col-md-12 text-center">
-			<div ng-repeat="produto in produtos | filter:filtro track by produto.id" class="col-md-3 col-sm-6 col-xs-12 box-products">
+			<div ng-repeat="produto in produtos | filter:filtro | orderBy: 'preco'" ng-if="produto.disponivel == isDisponivel" class="col-md-3 col-sm-6 col-xs-12 box-products">
 				<img class="img-responsive" src="{{produto.url}}" />
-				<!-- <p class="promocao">{{produto.promocao}}% <br/> OFF</p> -->
 				<div class="margin-buttons">
-					<h4>R$ {{produto.preco | number:2}}</h4>
+					<h4>{{produto.preco | currency}}</h4>
 					<button class="btn btn-default" ng-click="addToCart(produto)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Carrinho</button>
 					<a ng-click="getDetails(produto.id)" class="btn btn-info"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Detalhes</a>
 				</div>
 			</div>
 		</div>
 	</section>
+	<button class="btn btn-default" ng-click="setVarDisponivel('sim')">Mostrar itens disponiveis</button>
+	<button class="btn btn-default" ng-click="setVarDisponivel('nao')">Mostrar itens indisponiveis</button>
 </div>

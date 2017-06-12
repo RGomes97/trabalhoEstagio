@@ -34,7 +34,13 @@ angular.module('produtos',[])
 	$scope.filtrar = function(nome){ 
 		$scope.filtro = angular.copy(nome);
 	}
- 
+
+	$scope.isDisponivel = 'sim';
+
+	$scope.setVarDisponivel = function(string){
+		$scope.isDisponivel = string;
+	}
+
 	$scope.testando = function(){
 		console.log($scope.filtro);
 	}
