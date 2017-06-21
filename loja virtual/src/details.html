@@ -7,7 +7,7 @@
 			<div class="col-md-6 text-center"> 
 				<h2>{{produto.nome}}</h2>
 				<p>{{produto.descricao}}</p>
-				<h3>Preco: {{produto.preco | number:2}}</h3>
+				<h3>{{produto.preco - (produto.preco * (produto.promocao * 0.01)) | currency}}</h3>
 			</div>
 		</div>
 	</div>
