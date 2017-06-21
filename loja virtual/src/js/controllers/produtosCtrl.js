@@ -65,7 +65,7 @@ angular.module('produtos',[])
 	$scope.getTotal = function(){
 		var total = 0;
 		angular.forEach($scope.carrinho,function(item){
-			total += parseFloat(item.preco);
+			total += parseFloat(item.preco - (item.preco * (item.promocao * 0.01)));
 		})
 		return total;
 	}

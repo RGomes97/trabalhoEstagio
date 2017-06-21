@@ -10,7 +10,7 @@
 			<tr class="trAnimation" ng-repeat="produto in carrinho">
 				<td>{{produto.nome}}</td>
 				<td>Descricao</td>
-				<td>{{produto.preco | number:2}}</td>
+				<td>{{produto.preco - (produto.preco * (produto.promocao * 0.01)) | currency}}</td>
 				<td><button class="btn btn-default" ng-click="removeFromCart($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remover</button></td>
 			</tr>
 		</table>
