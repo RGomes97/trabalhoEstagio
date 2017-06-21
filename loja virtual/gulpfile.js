@@ -24,14 +24,13 @@ gulp.task('clean', function(){
 });
 
 gulp.task('build-js', function(){
-	gulp.src(['dist/js/modulos/main.js', 'dist/js/modulos/produtos.js', 'dist/js/controllers/produtosCtrl.js'])
+	gulp.src(['src/js/modulos/main.js', 'src/js/modulos/produtos.js', 'src/js/controllers/produtosCtrl.js'])
 		.pipe(concat('all.js'))
-		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('build-html', function(){
-	gulp.src('src/**/*.html')
+	gulp.src('dist/**/*.html')
 		.pipe(htmlReplace({
 			js: 'js/all.js'
 		}))
@@ -39,7 +38,7 @@ gulp.task('build-html', function(){
 })
 
 gulp.task('build-css', function(){
-	gulp.src('src/**/*.css')
+	gulp.src('dist/**/*.css')
 		.pipe(cssmin())
 		.pipe(gulp.dest('dist'))
 })
