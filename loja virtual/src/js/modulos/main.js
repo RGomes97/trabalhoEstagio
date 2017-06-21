@@ -96,7 +96,6 @@ app.run(function($httpBackend){
 	]);
 
 	$httpBackend.whenRoute('GET', '/api/produtos/:id').respond(function(method, url, data, headers, params) {
-		console.log(params);
 		var produto = [];
 		MockProducts.forEach(function(product){
 			if(product.id == params.id){

@@ -27,6 +27,7 @@ angular.module('produtos',[])
 			$scope.categorias = data.data;
 		});
 
+
 	$scope.filtro = '';
 
 	$scope.carrinho = [];

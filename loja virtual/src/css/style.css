@@ -1,0 +1,268 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.margin-top{
+	margin-top: 50px !important;
+}
+
+.margin-bottom-menu{
+	margin-bottom: 35px !important;
+}
+
+.button-menu{
+	border-right: 0;
+    border-radius: 0;
+}
+
+.button-menu {
+    border-right: 0 !important;
+    border-radius: 0 !important;
+    padding: 9px 25px !important;
+}
+
+.button-menu:first-child{
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+}
+
+.button-menu:last-child{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    border-right: 1px solid #ccc!important;
+}
+
+.box-cart{
+	border: 1px solid #e7e7e7;
+	border-top: 0;
+}
+
+.box-cart-empty{
+	border: 1px solid #e7e7e7;
+	min-height: 500px;
+	background-image: url('../img/sad.png');
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 1px 2px 8px -1px;
+}
+
+.box-products{
+	border: 1px solid #e6e6e6;
+	padding: 0 !important;
+	box-shadow: 1px 2px 8px -1px;
+	margin-bottom: 20px;
+}
+
+.box-products:hover{
+	box-shadow: 4px 5px 20px -2px;
+	
+}
+
+.box-products img{
+	height: 150px;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.box-products:before {
+  border: 65px solid transparent;
+  border-right-color: #337ab7;
+  content: "";
+  right: -66px;
+  top: -66px; 
+  position: absolute;
+  transform: rotate(135deg);
+  box-shadow: 25px -4px 19px -18px;
+}
+
+.box-product-detail{
+	border: 1px solid #e6e6e6;
+	padding: 0 !important;
+	box-shadow: 1px 2px 8px -1px;
+	margin-bottom: 20px;	
+}
+
+.detail{
+	padding: 20px !important;
+}
+
+.detail2{
+	padding-left: 0px !important;
+}
+
+.box-products.col-md-3 {
+	width: calc(25% - 10px);
+	margin-right: calc(((25% - 10px) - 25%) * -1);
+}
+
+.margin-buttons{
+	margin: 5px 0px;
+}
+
+.fixed-side-top{
+	position: fixed;
+	right: 0;
+	top: 175px;
+	width: 40px;
+	transition: width 0.5s ease-out;
+	z-index: 9999;
+	padding: 6px 2px 6px 12px !important;
+	
+}
+
+.fixed-side-top:hover{
+	width: 220px;
+}
+
+.fixed-side-top:before{
+	content: 'Mostrar produtos disponiveis';
+	padding-right: 4px;
+	display: none;
+	opacity: 0;
+	transition: opacity 1s ease-out, width 1s ease-out;
+}
+
+.fixed-side-top:hover:before{
+	opacity: 1;
+	display: inline-block;
+}
+
+.fixed-side-bottom{
+	position: fixed;
+	right: 0;
+	top: 211px;
+	width: 40px;
+	transition: width 0.5s ease-out;
+	z-index: 9999;
+	padding: 6px 2px 6px 12px !important;
+}
+
+.fixed-side-bottom:hover{
+	width: 230px;
+}
+
+.fixed-side-bottom:before{
+	content: 'Mostrar produtos indisponiveis';
+	padding-right: 4px;
+	display: none;
+	opacity: 0;
+	transition: opacity 1s ease-out, width 1s ease-out;
+}
+
+.fixed-side-bottom:hover:before{
+	opacity: 1;
+	display: inline-block;
+}
+
+.box-products h4{
+	margin-top: 0px;
+}
+
+.navbar-right{
+	margin-right: 0px !important;
+}
+
+.fade.ng-leave-active{
+	-moz-transform: scale(0.1);
+	-webkit-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	-o-transform: scale(0.1);
+	transform: scale(0.1);
+}
+
+.ng-enter{
+	transition: 1s;
+	opacity: 0;
+}
+
+.ng-enter-active{
+	opacity: 1;
+}
+
+.box-products.ng-leave{
+	transition: 0.5s;
+	opacity: 1;
+}
+
+.box-products.ng-leave-active{
+	opacity: 0;
+}
+
+.trAnimation.ng-leave{
+	transition: 0.75s;
+	opacity: 0.5;
+}
+
+.trAnimation.ng-leave-active{
+	opacity: 0;	
+}
+
+.keep-shopping{
+	margin-top: 360px;
+    margin-bottom: 30px;
+}
+
+.row{
+	margin-left: 0 !important;
+}
+
+.glyphicon{
+	margin-right: 10px;
+}
+
+.margin-top{
+	margin-top: 20px !important;
+}
+
+.navbar-default .navbar-text{
+	display: inline-block;
+}
+
+.right{
+	float: right;
+}
+
+.total{
+	width: 100%;
+	clear: both;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	margin: 20px 0px;
+	font-size: 18px;
+}
+
+.margin-bottom{
+	margin-bottom: 20px !important;
+}
+
+.normal-price{
+	text-decoration: line-through;
+}
+
+.promocao{
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	color: white;
+	font-family: 'Arial';
+	font-weight: bold;
+	font-size: 16px;
+	transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px){
+	.col-sm-6.box-products{
+		width: 50% !important;
+		margin-right: 0 !important;
+	}
+
+	.col-xs-12.box-products{
+		width: 100% !important;
+		margin-right: 0 !important;
+	}
+}
