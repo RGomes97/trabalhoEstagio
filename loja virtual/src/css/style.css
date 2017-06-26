@@ -5,12 +5,33 @@
 	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+body{
+	margin-top: 80px !important;
+}
+
+.navbar{
+	min-height: 75px!important;
+}
+
+.navbar-brand{
+	padding-top: 25px !important;
+	height: 75px !important;
+}
+
 .margin-top{
 	margin-top: 50px !important;
 }
 
 .margin-bottom-menu{
 	margin-bottom: 35px !important;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
 }
 
 .button-menu{

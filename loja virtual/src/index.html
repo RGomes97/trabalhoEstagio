@@ -20,10 +20,22 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
 </head>
 <body ng-controller="produtosCtrl">
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
-	    <p class="navbar-text navbar-left margin-top">DT-Ecommerce</p>
-	    <p class="navbar-text navbar-right"><button class="btn btn-default" ng-click="goToCart()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Meu carrinho : {{carrinho.length}}</button></p>
+	    <a class="navbar-brand">DT-Ecommerce</a>
+		<div class="row margin-top">
+			<div class="col-md-6 col-md-offset-2">
+				<div class="input-group">
+					<input type="text" ng-keyup="filtrar(search)" ng-model="search" class="form-control" placeholder="O que voce deseja?" />
+					<span class="input-group-btn">
+						<button class="btn btn-default">Filtrar</button>
+					</span>
+				</div>
+			</div>		
+			<div class="col-md-2 col-md">	
+			<button class="btn btn-default" ng-click="goToCart()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Meu carrinho : {{carrinho.length}}</button>
+			</div>
+		</div>
 	  </div>
 	</nav>
 	<div ng-view></div>

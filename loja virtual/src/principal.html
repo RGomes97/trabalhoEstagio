@@ -1,32 +1,31 @@
-<div class="container">
-	<section class="search">
-		<div class="row margin-top">
-			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-				<div class="input-group">
-					<input type="text" ng-keyup="filtrar(search)" ng-model="search" class="form-control" placeholder="O que voce deseja?" />
-					<span class="input-group-btn">
-						<button class="btn btn-default">Filtrar</button>
-					</span>
-				</div>
-			</div>		
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+		<img src="http://www.clickgratis.com.br/fotos-imagens/imagens/aHR0cDovL3d3dy5jbGlja2dyYXRpcy5jb20uYnIvZm90b3MtaW1hZ2Vucy9pbWFnZW5zL2FIUjBjRG92TDNkM2R5NWpiR2xqYTJkeVlYUnBjeTVqYjIwdVluSXZabTkwYjNNdGFXMWhaMlZ1Y3k5cGJXRm5aVzV6TDJGSVVqQmpSRzkyVERKck1rMXBOVEJoVnpVMVkwZHNha3h0VG5aaVV6aDVZbGhqTldFelNUVk1iWEIzV25jOVBTNXFjR2M9LmpwZw==.jpg" alt="...">
+		<div class="carousel-caption">
+			...
 		</div>
-	</section>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">	
 	<section class="menu margin-top">
-		<div class="col-md-12 text-center"> 
-		    <button ng-repeat="categoria in categorias track by $index" ng-click="filtrar(categoria.nome)" class="btn btn-default margin-bottom-menu margin-top button-menu">{{categoria.nome}}</button>  
+		<div class="row col-md-3 text-left">
+			<div class="col-md-12">	
+				<ul class="nav nav-pills nav-stacked">
+	  				<li ng-repeat="categoria in categorias track by $index" ng-click="filtrar(categoria.nome)" role="presentation"><a href="#">{{categoria.nome}}</a></li>
+				</ul>
+			</div>
 		</div>
-	</section>
 	<section class="products margin-top">
-		<div class="row col-md-12 text-center">
+		<div class="col-md-9">	
 			<div ng-repeat="produto in produtos | filter:filtro | orderBy: 'preco'" ng-if="produto.disponivel == isDisponivel" class="col-md-3 col-sm-6 col-xs-12 box-products">
 				<img class="img-responsive" src="{{produto.url}}" />
 				<div class="col-md-6">
-					<h4>{{produto.nome}}</h4>	
+					<h4>{{produto.nome}}</h4>
 				</div>
-				
 				<p class="promocao">{{produto.promocao}}% <br/> OFF</p>
 				<div class="margin-buttons">
-					
 					<small class="normal-price">{{produto.preco | currency}}</small>
 					<h4>{{produto.preco - (produto.preco * (produto.promocao * 0.01)) | currency}}</h4>
 					<button class="btn btn-default" ng-disabled="produto.disponivel == 'nao'" ng-click="addToCart(produto)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Carrinho</button>

@@ -70,6 +70,16 @@ angular.module('produtos',[])
 		return total;
 	}
 
+	$scope.active = 0;
+    $scope.myInterval = 5000;
+  	$scope.noWrapSlides = false;
+    $scope.slides = [
+      {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1867190.jpg',
+      id: 0},
+      {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1667348.jpg',
+      id: 1}
+    ];
+
 	produtosService.productById(1)
  	.then(function(data) {
  		console.log(data);

@@ -1,4 +1,4 @@
-const app = angular.module('main', ['produtos','ngAnimate','ngRoute','ngMockE2E']);
+const app = angular.module('main', ['produtos', 'ngAnimate','ngRoute','ngMockE2E']);
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/cart', {
@@ -83,15 +83,15 @@ app.run(function($httpBackend){
 	$httpBackend.when('GET', '/api/categorias').respond([
 		{
 			id: 1,
-			nome: 'gatos'
+			nome: 'Gatos'
 		},
 		{
 			id: 2,
-			nome: 'cachorros'
+			nome: 'Cachorros'
 		},
 		{
 			id: 3,
-			nome: 'lobos'
+			nome: 'Lobos'
 		}
 	]);
 
