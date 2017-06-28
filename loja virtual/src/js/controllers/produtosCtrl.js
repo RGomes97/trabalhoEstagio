@@ -13,15 +13,17 @@ angular.module('produtos',[])
 	    },
 	    ordenacao: function(){
 	    	return $http.get('/api/ordens');
+	    },
+	    productByCategory: function(categoria){
+	    	return $http.get('/api/categorias/' + categoria);
 	    }
 	}
 })
 
-.controller('produtosCtrl', function($scope, $location, produtosService){
+.controller('produtosCtrl', ['$scope','$location','$filter', 'produtosService', function($scope, $location, $filter, produtosService){
 
 	produtosService.allProducts()
 		.then(function(data){
-			console.log(data);
 			$scope.produtos = data.data;
 		});
 
@@ -43,7 +45,6 @@ angular.module('produtos',[])
 
 	$scope.filtrar = function(nome){ 
 		$scope.filtro = angular.copy(nome);
-		console.log($scope.filtro);
 	}
 
 	$scope.isDisponivel = 'sim';
@@ -55,12 +56,7 @@ angular.module('produtos',[])
 	$scope.ordem = 'preco';
 
 	$scope.ordenar = function(string){
-		$scope.ordem = string;
-		console.log($scope.ordem);
-	}
-
-	$scope.testando = function(){
-		console.log($scope.filtro);
+		$scope.ordem = string.toLowerCase();
 	}
 
 	$scope.addToCart = function(product){
@@ -71,8 +67,17 @@ angular.module('produtos',[])
 		$scope.carrinho.splice(product, 1);
 	};
 
+	$scope.zerarFiltro = function(){
+		console.log('aaaa');
+		$scope.filtro = '';
+	}
+
 	$scope.getDetails = function(id){
 		$location.path('/details/' + id);
+	}
+
+	$scope.getCategories = function(param){
+		$location.path('/categorias/' + param);
 	}
 
 	$scope.goToCart = function(){
@@ -87,11 +92,7 @@ angular.module('produtos',[])
 		return total;
 	}
 
-	produtosService.productById(1)
- 	.then(function(data) {
- 		console.log(data);
- 	})
-})
+}])
 
 .controller('detailsCtrl', function($scope,$routeParams, produtosService){
   	$scope.produto = []; 
@@ -99,4 +100,12 @@ angular.module('produtos',[])
 	  	.then(function(data){
 	  		$scope.produto = data.data;
 	});
+})
+
+.controller('productCategoryCtrl', function($scope,$routeParams, produtosService){
+	$scope.produtos = [];
+	produtosService.productByCategory($routeParams.categoria)
+		.then(function(data){
+			$scope.produtos = data.data;
+		});	
 })

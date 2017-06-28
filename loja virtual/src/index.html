@@ -24,7 +24,6 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <a class="navbar-brand">DT-Ecommerce</a>
-	    <faq></faq>
 		<div class="row margin-top">
 			<div class="col-md-6 col-md-offset-2">
 				<div class="input-group">
@@ -40,33 +39,8 @@
 		</div>
 	  </div>
 	</nav>
+	<div faq></div>
 	<div ng-view></div>
-	<footer class="footer">
-	    <div class="container">
-	      <div class="row text-center">
-
-	        <div class="col-xs-12 col-sm-3 col-md-4">
-	        	<p>Central de Atendimento</p>
-	        	<p>Como Comprar</p>
-	        	<p>Trocar e Devolucoes</p>
-	        	<p>Processo de Entregas</p>
-	        </div>
-	        <div class="col-xs-12 col-sm-6 col-md-6">
-	         <h3>Aceitamos Cartões</h3>
-	          <i class="fa fa-cc-visa first-icons" aria-hidden="true"></i>
-	          <i class="fa fa-cc-mastercard first-icons" aria-hidden="true"></i>
-	          <i class="fa fa-cc-amex first-icons" aria-hidden="true"></i>
-	          <i class="fa fa-cc-diners-club first-icons" aria-hidden="true"></i>
-	          <i class="fa fa-cc-discover first-icons" aria-hidden="true"></i>
-
-	        </div>
-	        <div class="col-xs-12 col-sm-3 col-md-2">
-	          <p>dtecommerce@directtalk.com.br.com</p>
-	          <a href="#"><i style="font-size: 35px;" class="fa fa-lg fa-facebook-square"></i></a>
-	          <a href="#"><i style="font-size: 35px;" class="fa fa-lg fa-twitter-square"></i></a>
-	          <a href="#"><i style="font-size: 35px;" class="fa fa-lg fa-google-plus-square"></i></a>
-	        </div>
-	    </div>
-    </footer>
+	<div ng-include="'footer.html'"></div>
 </body>
 </html>

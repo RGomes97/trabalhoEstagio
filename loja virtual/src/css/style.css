@@ -13,6 +13,35 @@ footer{
 	background-color: #f8f8f8;
     padding: 21px;
     border-top: 1px solid grey;
+    clear: both;
+}
+
+.category-products{
+	margin-top: 100px;
+}
+
+.category{
+	width: 100%;
+	cursor: pointer;
+	font-size: 16px;
+	background-color: white;
+	padding: 7px 0px;
+	padding-left: 20px;
+}
+
+.category:hover{
+	background-color: #dadada;
+	transition: .3s;
+}
+
+.category:active{
+	background-color: #b3b3b3;
+}
+
+.sidenav-title{
+	padding-left: 20px;
+    font-size: 17px;
+    text-decoration: underline;
 }
 
 .navbar{
@@ -140,11 +169,6 @@ footer{
 .margin-buttons{
 	margin: 5px 0px;
 }
-
-.filtro-wrapper{
-	padding-left: 15px;
-}
-
 .fixed-side-top{
 	position: fixed;
 	right: 0;

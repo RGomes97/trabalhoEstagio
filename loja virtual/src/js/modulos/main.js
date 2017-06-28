@@ -11,6 +11,10 @@ app.config(function($routeProvider){
 		templateUrl: 'details.html',
 		controller: 'detailsCtrl'
 	})
+	.when('/categorias/:categoria', {
+		templateUrl: 'categorias.html',
+		controller: 'productCategoryCtrl'
+	})
 	.otherwise({redirectTo:'/'});
 });
 
@@ -115,4 +119,14 @@ app.run(function($httpBackend){
 		})
 		return [200, produto];
 	});
+
+	$httpBackend.whenRoute('GET', '/api/categorias/:categoria').respond(function(method, url, data, headers, params){
+		var productCategory = [];
+		MockProducts.forEach(function(product){
+			if(product.categoria == params.categoria){
+				productCategory.push(angular.copy(product));
+			};
+		})
+		return [200, productCategory];
+	})
 });
