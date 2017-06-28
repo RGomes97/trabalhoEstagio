@@ -5,10 +5,10 @@ app.directive('faq', function($compile, $templateRequest){
     	replace: true,
     	link: function(scope, element){
     		$templateRequest("../../help.html").then(function(html){
-              var template = angular.element(html);
+              var template = angular.element(html);
 		      element.append(template);
 		      $compile(template)(scope);
-            });
-    	}
+            });
+    	});
 	};
 })

@@ -10,6 +10,9 @@ angular.module('produtos',[])
 	    },
 	    productById: function(id) {
 	    	return $http.get('/api/produtos/' + id);
+	    },
+	    ordenacao: function(){
+	    	return $http.get('/api/ordens');
 	    }
 	}
 })
@@ -27,6 +30,12 @@ angular.module('produtos',[])
 			$scope.categorias = data.data;
 		});
 
+	produtosService.ordenacao()
+		.then(function(data){
+			$scope.ordens = data.data;
+		})
+	
+
 
 	$scope.filtro = '';
 
@@ -34,12 +43,20 @@ angular.module('produtos',[])
 
 	$scope.filtrar = function(nome){ 
 		$scope.filtro = angular.copy(nome);
+		console.log($scope.filtro);
 	}
 
 	$scope.isDisponivel = 'sim';
 
 	$scope.setVarDisponivel = function(string){
 		$scope.isDisponivel = string;
+	}
+
+	$scope.ordem = 'preco';
+
+	$scope.ordenar = function(string){
+		$scope.ordem = string;
+		console.log($scope.ordem);
 	}
 
 	$scope.testando = function(){
@@ -69,16 +86,6 @@ angular.module('produtos',[])
 		})
 		return total;
 	}
-
-	$scope.active = 0;
-    $scope.myInterval = 5000;
-  	$scope.noWrapSlides = false;
-    $scope.slides = [
-      {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1867190.jpg',
-      id: 0},
-      {image: 'http://www.pixolo.it/wp-content/uploads/2012/07/wallpaper-1667348.jpg',
-      id: 1}
-    ];
 
 	produtosService.productById(1)
  	.then(function(data) {

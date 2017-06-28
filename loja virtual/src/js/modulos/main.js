@@ -95,6 +95,17 @@ app.run(function($httpBackend){
 		}
 	]);
 
+	$httpBackend.when('GET', '/api/ordens').respond([
+		{
+			id: 1,
+			nome: 'Preco'
+		},
+		{
+			id: 2,
+			nome: 'Nome'
+		}
+	]);
+
 	$httpBackend.whenRoute('GET', '/api/produtos/:id').respond(function(method, url, data, headers, params) {
 		var produto = [];
 		MockProducts.forEach(function(product){

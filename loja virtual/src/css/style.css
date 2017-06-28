@@ -6,7 +6,13 @@
 }
 
 body{
-	margin-top: 80px !important;
+	margin-top: 75px !important;
+}
+
+footer{
+	background-color: #f8f8f8;
+    padding: 21px;
+    border-top: 1px solid grey;
 }
 
 .navbar{
@@ -20,6 +26,10 @@ body{
 
 .margin-top{
 	margin-top: 50px !important;
+}
+
+.first-icons{
+	font-size:30px !important;
 }
 
 .margin-bottom-menu{
@@ -78,9 +88,15 @@ body{
 	margin-bottom: 20px;
 }
 
+.side-box{
+	border: 1px solid #e6e6e6;
+	padding: 0 !important;
+	box-shadow: 1px 2px 8px -1px;
+	margin-bottom: 20px;	
+}
+
 .box-products:hover{
 	box-shadow: 4px 5px 20px -2px;
-	
 }
 
 .box-products img{
@@ -98,6 +114,7 @@ body{
   position: absolute;
   transform: rotate(135deg);
   box-shadow: 25px -4px 19px -18px;
+  pointer-events: none;
 }
 
 .box-product-detail{
@@ -122,6 +139,10 @@ body{
 
 .margin-buttons{
 	margin: 5px 0px;
+}
+
+.filtro-wrapper{
+	padding-left: 15px;
 }
 
 .fixed-side-top{

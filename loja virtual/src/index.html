@@ -9,12 +9,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-
+	<link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-mocks.js"></script>
 	<!-- build:js -->
 	<script src="js/modulos/main.js"></script>
 	<script src="js/modulos/produtos.js"></script>
+	<script src="js/diretivas/faq.js"></script>
 	<script src="js/controllers/produtosCtrl.js"></script>
 	<!-- endbuild -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
@@ -23,6 +24,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <a class="navbar-brand">DT-Ecommerce</a>
+	    <faq></faq>
 		<div class="row margin-top">
 			<div class="col-md-6 col-md-offset-2">
 				<div class="input-group">
@@ -39,5 +41,32 @@
 	  </div>
 	</nav>
 	<div ng-view></div>
+	<footer class="footer">
+	    <div class="container">
+	      <div class="row text-center">
+
+	        <div class="col-xs-12 col-sm-3 col-md-4">
+	        	<p>Central de Atendimento</p>
+	        	<p>Como Comprar</p>
+	        	<p>Trocar e Devolucoes</p>
+	        	<p>Processo de Entregas</p>
+	        </div>
+	        <div class="col-xs-12 col-sm-6 col-md-6">
+	         <h3>Aceitamos Cartões</h3>
+	          <i class="fa fa-cc-visa first-icons" aria-hidden="true"></i>
+	          <i class="fa fa-cc-mastercard first-icons" aria-hidden="true"></i>
+	          <i class="fa fa-cc-amex first-icons" aria-hidden="true"></i>
+	          <i class="fa fa-cc-diners-club first-icons" aria-hidden="true"></i>
+	          <i class="fa fa-cc-discover first-icons" aria-hidden="true"></i>
+
+	        </div>
+	        <div class="col-xs-12 col-sm-3 col-md-2">
+	          <p>dtecommerce@directtalk.com.br.com</p>
+	          <a href="#"><i style="font-size: 35px;" class="fa fa-lg fa-facebook-square"></i></a>
+	          <a href="#"><i style="font-size: 35px;" class="fa fa-lg fa-twitter-square"></i></a>
+	          <a href="#"><i style="font-size: 35px;" class="fa fa-lg fa-google-plus-square"></i></a>
+	        </div>
+	    </div>
+    </footer>
 </body>
 </html>
