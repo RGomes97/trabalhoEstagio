@@ -1,6 +1,6 @@
 angular.module('produtos',[])
 
-.factory('produtosService', function($http){
+.factory('produtosService',['$http', function($http){
 	return {
 	    allProducts: function() {
 	      return $http.get('/api/produtos');
@@ -18,7 +18,7 @@ angular.module('produtos',[])
 	    	return $http.get('/api/categorias/' + categoria);
 	    }
 	}
-})
+}])
 
 .controller('produtosCtrl', ['$scope','$location','$filter', 'produtosService', function($scope, $location, $filter, produtosService){
 
@@ -67,9 +67,12 @@ angular.module('produtos',[])
 		$scope.carrinho.splice(product, 1);
 	};
 
-	$scope.zerarFiltro = function(){
-		console.log('aaaa');
-		$scope.filtro = '';
+	$scope.goToIndex = function(){
+		$location.path('/');
+	}
+
+	$scope.goToFaq = function(){
+		$location.path('/help');
 	}
 
 	$scope.getDetails = function(id){
@@ -94,18 +97,18 @@ angular.module('produtos',[])
 
 }])
 
-.controller('detailsCtrl', function($scope,$routeParams, produtosService){
+.controller('detailsCtrl', ['$scope','$routeParams','produtosService', function($scope,$routeParams, produtosService){
   	$scope.produto = []; 
   	produtosService.productById($routeParams.id)
 	  	.then(function(data){
 	  		$scope.produto = data.data;
 	});
-})
+}])
 
-.controller('productCategoryCtrl', function($scope,$routeParams, produtosService){
+.controller('productCategoryCtrl', ['$scope','$routeParams','produtosService', function($scope,$routeParams, produtosService){
 	$scope.produtos = [];
 	produtosService.productByCategory($routeParams.categoria)
 		.then(function(data){
 			$scope.produtos = data.data;
 		});	
-})
+}])

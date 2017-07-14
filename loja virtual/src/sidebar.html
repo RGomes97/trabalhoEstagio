@@ -8,6 +8,7 @@
 					<div class="filtro-wrapper">
 						<p class="sidenav-title" class="text-left">Categoria:</p>
 						<div ng-repeat="categoria in categorias track by $index" ng-click="getCategories(categoria.nome.toLowerCase())" class="category">{{categoria.nome}}</div>
+						<div class="category" ng-click="goToIndex()">Todos</div>
 					    <hr>
 					    <p class="sidenav-title">Ordem:</p>
 						<div ng-repeat="ordem in ordens" ng-click="ordenar(ordem.nome)" class="category">{{ordem.nome}}</div>

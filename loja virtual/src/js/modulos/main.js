@@ -1,5 +1,5 @@
 const app = angular.module('main', ['produtos', 'ngAnimate','ngRoute','ngMockE2E']);
-app.config(function($routeProvider){
+app.config(['$routeProvider',function($routeProvider){
 	$routeProvider
 	.when('/cart', {
 		templateUrl: 'cart.html'
@@ -15,10 +15,13 @@ app.config(function($routeProvider){
 		templateUrl: 'categorias.html',
 		controller: 'productCategoryCtrl'
 	})
+	.when('/help', {
+		templateUrl: 'help.html'
+	})
 	.otherwise({redirectTo:'/'});
-});
+}]);
 
-app.run(function($httpBackend){
+app.run(['$httpBackend', function($httpBackend){
 
 	var MockProducts = [{
 			id: 1,
@@ -129,4 +132,4 @@ app.run(function($httpBackend){
 		})
 		return [200, productCategory];
 	})
-});
+}]);

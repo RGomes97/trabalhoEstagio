@@ -16,8 +16,17 @@ footer{
     clear: both;
 }
 
+.navbar-brand{
+	cursor: pointer;
+}
+
 .category-products{
 	margin-top: 100px;
+}
+
+.link:hover{
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 .category{

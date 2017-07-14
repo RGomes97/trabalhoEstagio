@@ -24,8 +24,9 @@ gulp.task('clean', function(){
 });
 
 gulp.task('build-js', function(){
-	gulp.src(['src/js/modulos/main.js', 'src/js/modulos/produtos.js', 'src/js/controllers/produtosCtrl.js'])
+	gulp.src(['src/js/modulos/main.js', 'src/js/modulos/produtos.js', 'src/js/controllers/produtosCtrl.js', 'src/js/diretivas/faq.js'])
 		.pipe(concat('all.js'))
+		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'));
 });
 

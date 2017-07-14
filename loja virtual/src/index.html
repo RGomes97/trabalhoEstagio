@@ -12,18 +12,13 @@
 	<link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-mocks.js"></script>
-	<!-- build:js -->
-	<script src="js/modulos/main.js"></script>
-	<script src="js/modulos/produtos.js"></script>
-	<script src="js/diretivas/faq.js"></script>
-	<script src="js/controllers/produtosCtrl.js"></script>
-	<!-- endbuild -->
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
 </head>
 <body ng-controller="produtosCtrl">
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
-	    <a class="navbar-brand">DT-Ecommerce</a>
+	    <a ng-click="goToIndex()" class="navbar-brand">DT-Ecommerce</a>
 		<div class="row margin-top">
 			<div class="col-md-6 col-md-offset-2">
 				<div class="input-group">
@@ -39,8 +34,13 @@
 		</div>
 	  </div>
 	</nav>
-	<div faq></div>
 	<div ng-view></div>
 	<div ng-include="'footer.html'"></div>
 </body>
+<!-- build:js -->
+	<script src="js/modulos/main.js"></script>
+	<script src="js/modulos/produtos.js"></script>
+	<script src="js/controllers/produtosCtrl.js"></script>
+	<script src="js/diretivas/faq.js"></script>
+<!-- endbuild -->
 </html>
