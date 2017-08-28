@@ -3,6 +3,7 @@ clean = require('gulp-clean'),
 concat = require('gulp-concat'),
 htmlReplace = require('gulp-html-replace'),
 uglify = require('gulp-uglify'),
+sass = require('gulp-sass'),
 cssmin = require('gulp-cssmin');
 
 
@@ -39,7 +40,8 @@ gulp.task('build-html', function(){
 })
 
 gulp.task('build-css', function(){
-	gulp.src('dist/**/*.css')
+	gulp.src('src/**/*.scss')
+		.pipe(sass())
 		.pipe(cssmin())
 		.pipe(gulp.dest('dist'))
 })

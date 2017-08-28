@@ -1,3 +1,8 @@
+$footer-color: #f8f8f8;
+$border-grey-e7: #e7e7e7;
+$border-grey-e6: #e6e6e6;
+
+
 * {
 	margin:0;
 	padding:0;
@@ -10,7 +15,7 @@ body{
 }
 
 footer{
-	background-color: #f8f8f8;
+	background-color: $footer-color;
     padding: 21px;
     border-top: 1px solid grey;
     clear: both;
@@ -24,9 +29,11 @@ footer{
 	margin-top: 100px;
 }
 
-.link:hover{
+.link{
+	&:hover{
 	cursor: pointer;
 	text-decoration: underline;
+	}
 }
 
 .category{
@@ -36,15 +43,14 @@ footer{
 	background-color: white;
 	padding: 7px 0px;
 	padding-left: 20px;
-}
 
-.category:hover{
-	background-color: #dadada;
-	transition: .3s;
-}
-
-.category:active{
-	background-color: #b3b3b3;
+	&:hover{
+		background-color: #dadada;
+		transition: .3s;
+	}
+	&:active{
+		background-color: #b3b3b3;
+	}
 }
 
 .sidenav-title{
@@ -83,34 +89,29 @@ footer{
 }
 
 .button-menu{
-	border-right: 0;
-    border-radius: 0;
-}
-
-.button-menu {
-    border-right: 0 !important;
+	border-right: 0 !important;
     border-radius: 0 !important;
     padding: 9px 25px !important;
+    &:first-child{
+    	border-top-left-radius: 5px !important;
+    	border-bottom-left-radius: 5px !important;
+    }
+    &:last-child{
+    	border-top-right-radius: 5px !important;
+	    border-bottom-right-radius: 5px !important;
+	    border-right: 1px solid #ccc!important;
+    }
 }
 
-.button-menu:first-child{
-    border-top-left-radius: 5px !important;
-    border-bottom-left-radius: 5px !important;
-}
 
-.button-menu:last-child{
-    border-top-right-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
-    border-right: 1px solid #ccc!important;
-}
 
 .box-cart{
-	border: 1px solid #e7e7e7;
+	border: 1px solid $border-grey-e7;
 	border-top: 0;
 }
 
 .box-cart-empty{
-	border: 1px solid #e7e7e7;
+	border: 1px solid $border-grey-e7;
 	min-height: 500px;
 	background-image: url('../img/sad.png');
 	background-size: 30%;
@@ -119,44 +120,45 @@ footer{
 	box-shadow: 1px 2px 8px -1px;
 }
 
-.box-products{
-	border: 1px solid #e6e6e6;
-	padding: 0 !important;
-	box-shadow: 1px 2px 8px -1px;
-	margin-bottom: 20px;
-}
-
 .side-box{
-	border: 1px solid #e6e6e6;
+	border: 1px solid $border-grey-e6;
 	padding: 0 !important;
 	box-shadow: 1px 2px 8px -1px;
 	margin-bottom: 20px;	
 }
 
-.box-products:hover{
-	box-shadow: 4px 5px 20px -2px;
-}
+.box-products{
+	border: 1px solid $border-grey-e6;
+	padding: 0 !important;
+	box-shadow: 1px 2px 8px -1px;
+	margin-bottom: 20px;
 
-.box-products img{
-	height: 150px;
-	width: 100%;
-	margin-bottom: 8px;
-}
-
-.box-products:before {
-  border: 65px solid transparent;
-  border-right-color: #337ab7;
-  content: "";
-  right: -66px;
-  top: -66px; 
-  position: absolute;
-  transform: rotate(135deg);
-  box-shadow: 25px -4px 19px -18px;
-  pointer-events: none;
+	h4{
+		margin-top: 0px;
+	}
+	img{
+		height: 150px;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	&:hover{
+		box-shadow: 4px 5px 20px -2px;
+	}
+	&:before{
+		border: 65px solid transparent;
+		border-right-color: #337ab7;
+		content: "";
+		right: -66px;
+		top: -66px; 
+		position: absolute;
+		transform: rotate(135deg);
+		box-shadow: 25px -4px 19px -18px;
+		pointer-events: none;
+	}
 }
 
 .box-product-detail{
-	border: 1px solid #e6e6e6;
+	border: 1px solid $border-grey-e6;
 	padding: 0 !important;
 	box-shadow: 1px 2px 8px -1px;
 	margin-bottom: 20px;	
@@ -186,24 +188,21 @@ footer{
 	transition: width 0.5s ease-out;
 	z-index: 9999;
 	padding: 6px 2px 6px 12px !important;
+	&:hover{
+		width: 220px;
+	}
+	&:before{
+		content: 'Mostrar produtos disponiveis';
+		padding-right: 4px;
+		display: none;
+		opacity: 0;
+		transition: opacity 1s ease-out, width 1s ease-out;
+	}
+	&:hover:before{
+		opacity: 1;
+		display: inline-block;
+	}
 	
-}
-
-.fixed-side-top:hover{
-	width: 220px;
-}
-
-.fixed-side-top:before{
-	content: 'Mostrar produtos disponiveis';
-	padding-right: 4px;
-	display: none;
-	opacity: 0;
-	transition: opacity 1s ease-out, width 1s ease-out;
-}
-
-.fixed-side-top:hover:before{
-	opacity: 1;
-	display: inline-block;
 }
 
 .fixed-side-bottom{
@@ -214,28 +213,23 @@ footer{
 	transition: width 0.5s ease-out;
 	z-index: 9999;
 	padding: 6px 2px 6px 12px !important;
+	&:hover{
+		width: 230px;
+	}
+	&:before{
+		content: 'Mostrar produtos indisponiveis';
+		padding-right: 4px;
+		display: none;
+		opacity: 0;
+		transition: opacity 1s ease-out, width 1s ease-out;
+	}
+	&:hover:before{
+		opacity: 1;
+		display: inline-block;
+	}
 }
 
-.fixed-side-bottom:hover{
-	width: 230px;
-}
 
-.fixed-side-bottom:before{
-	content: 'Mostrar produtos indisponiveis';
-	padding-right: 4px;
-	display: none;
-	opacity: 0;
-	transition: opacity 1s ease-out, width 1s ease-out;
-}
-
-.fixed-side-bottom:hover:before{
-	opacity: 1;
-	display: inline-block;
-}
-
-.box-products h4{
-	margin-top: 0px;
-}
 
 .navbar-right{
 	margin-right: 0px !important;
